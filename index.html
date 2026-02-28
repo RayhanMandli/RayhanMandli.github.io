@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rayhan Mandli — Full Stack Developer</title>
+  <meta name="description" content="Rayhan Mandli — Full Stack Developer building production-ready web systems. Computer Engineering student focused on scalable backend systems, secure authentication, RBAC, and real-world MERN applications." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet" />
+
+  <!-- Devicon for skill logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+
+  <!-- tsParticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==================== PAGE LOADER ==================== -->
+  <div id="page-loader" class="loader">
+    <div class="loader__content">
+      <span class="loader__text">Initializing Portfolio...</span>
+      <div class="loader__underline"><div class="loader__underline-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav id="navbar" class="navbar">
+    <a href="#hero" class="navbar__logo">RM</a>
+    <ul class="navbar__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact" class="navbar__cta">Contact</a></li>
+    </ul>
+    <button class="navbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="hero">
+    <div id="tsparticles" class="hero__particles"></div>
+    <div class="hero__container">
+      <div class="hero__text anim-hero" >
+        <h1 class="hero__heading">
+          <span class="text-white">Rayhan</span>
+          <span class="text-cyan">Mandli</span>
+        </h1>
+        <div class="hero__subtitle-wrapper">
+          <span class="hero__subtitle-prefix">Full Stack Developer</span>
+          <span class="hero__subtitle-separator">·</span>
+          <span class="hero__rotating-text" id="rotating-text">Builder</span>
+        </div>
+        <p class="hero__description">
+          Computer Engineering student focused on scalable backend systems, secure authentication, RBAC, and real-world MERN applications.
+        </p>
+        <div class="hero__buttons">
+          <a href="#projects" class="btn btn--outline">View Projects</a>
+          <a href="#contact" class="btn btn--outline">Contact Me</a>
+          <a href="resume.pdf" download class="btn-download" aria-label="Download Resume">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero__image anim-hero" >
+        <div class="hero__portrait">
+          <div class="hero__portrait-glow"></div>
+          <div class="hero__portrait-frame">
+            <img src="images/profilepic.png" alt="Rayhan Mandli" class="hero__portrait-img" />
+            <div class="hero__portrait-fade"></div>
+            <div class="hero__portrait-glass"></div>
+            <div class="hero__portrait-sweep"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="about section">
+    <div class="section__container section__container--narrow">
+      <span class="section__label anim-fade">KNOW ABOUT ME</span>
+      <h2 class="section__heading anim-fade">
+        Full-Stack Developer and<br />a little bit of <span class="text-cyan-italic">everything</span>
+      </h2>
+      <p class="about__text anim-fade">
+        I'm Rayhan Mandli, a passionate full-stack developer who thrives on building real-world applications. From frontend to backend, I focus on writing clean, efficient code. My expertise spans React, Node.js, Express, and MongoDB — and I'm always eager to learn more.
+      </p>
+      <p class="about__text anim-fade">
+        When I'm not immersed in work, I'm exploring new ideas and staying curious. Life's about balance, and I love embracing every part of it. I believe in waking up each day eager to make a difference!
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS SECTION ==================== -->
+  <section id="skills" class="skills section">
+    <div class="section__container">
+      <span class="section__label anim-fade">MY SKILLS</span>
+      <h2 class="section__heading anim-fade">The Secret <span class="text-cyan-italic">Sauce</span></h2>
+
+      <div class="skills__grid">
+        <!-- Frontend -->
+        <div class="skills__category anim-fade">
+          <h3 class="skills__category-title">Frontend</h3>
+          <div class="skills__logos" id="skills-frontend">
+            <div class="skill-item" style="--brand:#61DAFB"><i class="devicon-react-original"></i><span>React</span></div>
+            <div class="skill-item" style="--brand:#646CFF"><i class="devicon-vitejs-plain"></i><span>Vite</span></div>
+            <div class="skill-item" style="--brand:#38BDF8"><i class="devicon-tailwindcss-original"></i><span>Tailwind CSS</span></div>
+            <div class="skill-item" style="--brand:#E10098"><i class="devicon-framermotion-original"></i><span>Framer Motion</span></div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skills__category anim-fade">
+          <h3 class="skills__category-title">Backend</h3>
+          <div class="skills__logos" id="skills-backend">
+            <div class="skill-item" style="--brand:#3C873A"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+            <div class="skill-item" style="--brand:#CCCCCC"><i class="devicon-express-original"></i><span>Express.js</span></div>
+            <div class="skill-item" style="--brand:#00E5FF"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M7 7h10v2H9v6h8v2H7V7zm12-2H5v14h14V5z"/></svg><span>REST APIs</span></div>
+            <div class="skill-item" style="--brand:#F59E0B"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18l7.52 3.76L12 11.7 4.48 7.94 12 4.18zM4 9.06l7 3.5v7.38l-7-3.5V9.06zm9 10.88v-7.38l7-3.5v7.38l-7 3.5z"/></svg><span>JWT Auth</span></div>
+            <div class="skill-item" style="--brand:#00E5FF"><svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.67-3.13 9.05-7 10.18-3.87-1.13-7-5.51-7-10.18V6.3l7-3.12z"/></svg><span>RBAC</span></div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skills__category anim-fade">
+          <h3 class="skills__category-title">Database</h3>
+          <div class="skills__logos" id="skills-database">
+            <div class="skill-item" style="--brand:#47A248"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
+            <div class="skill-item" style="--brand:#800000"><i class="devicon-mongoose-original"></i><span>Mongoose</span></div>
+            <div class="skill-item" style="--brand:#DC382D"><i class="devicon-redis-plain"></i><span>Redis</span></div>
+            <div class="skill-item" style="--brand:#00758F"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skills__category anim-fade">
+          <h3 class="skills__category-title">Tools</h3>
+          <div class="skills__logos" id="skills-tools">
+            <div class="skill-item" style="--brand:#F05032"><i class="devicon-git-plain"></i><span>Git</span></div>
+            <div class="skill-item" style="--brand:#FFFFFF"><i class="devicon-github-original"></i><span>GitHub</span></div>
+            <div class="skill-item" style="--brand:#FF6C37"><i class="devicon-postman-plain"></i><span>Postman</span></div>
+            <div class="skill-item" style="--brand:#4285F4"><i class="devicon-google-plain"></i><span>Google OAuth</span></div>
+            <div class="skill-item" style="--brand:#2496ED"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS SECTION ==================== -->
+  <section id="projects" class="projects section">
+    <div class="section__container">
+      <span class="section__label anim-fade">MY WORK</span>
+      <h2 class="section__heading anim-fade">Featured <span class="text-cyan">Projects</span></h2>
+
+      <!-- Project 1 -->
+      <div class="project anim-fade">
+        <div class="project__image">
+          <div class="project__preview" data-project="gdrive-express">
+            <img src="images/gdriveexpress.png" alt="Production-Ready Storage App" class="project__preview-img" />
+            <div class="project__preview-vignette"></div>
+            <div class="project__preview-overlay">
+              <div class="project__preview-terminal">
+                <div class="project__preview-dots">
+                  <span class="dot dot--red"></span>
+                  <span class="dot dot--yellow"></span>
+                  <span class="dot dot--green"></span>
+                </div>
+                <span class="project__preview-cmd">~ rayhanmandli$ gdrive-express</span>
+              </div>
+              <div class="project__preview-actions">
+                <a href="#" class="btn btn--primary btn--sm btn--live" data-deployed="false" aria-disabled="true">Live Site</a>
+                <a href="https://github.com/RayhanMandli/storage-app" class="btn btn--outline btn--sm">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project__info">
+          <h3 class="project__title">Production-Ready Storage App</h3>
+          <p class="project__description">A robust, enterprise-grade file storage system with complete access control and sharing capabilities.</p>
+          <ul class="project__features">
+            <li>RBAC with 4 distinct roles</li>
+            <li>Secure file upload pipeline</li>
+            <li>Granular sharing permissions</li>
+            <li>Optimized search architecture</li>
+          </ul>
+          <div class="project__tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">JWT Auth</span>
+            <span class="tag">RBAC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-separator"></div>
+
+      <!-- Project 2 -->
+      <div class="project project--reversed anim-fade">
+        <div class="project__image">
+          <div class="project__preview" data-project="remember-app">
+            <img src="images/rememberapp.png" alt="Knowledge Storage App" class="project__preview-img" />
+            <div class="project__preview-vignette"></div>
+            <div class="project__preview-overlay">
+              <div class="project__preview-terminal">
+                <div class="project__preview-dots">
+                  <span class="dot dot--red"></span>
+                  <span class="dot dot--yellow"></span>
+                  <span class="dot dot--green"></span>
+                </div>
+                <span class="project__preview-cmd">~ rayhanmandli$ remember-app</span>
+              </div>
+              <div class="project__preview-actions">
+                <a href="#" class="btn btn--primary btn--sm btn--live" data-deployed="false" aria-disabled="true">Live Site</a>
+                <a href="https://github.com/RayhanMandli/remember-app" class="btn btn--outline btn--sm">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project__info">
+          <h3 class="project__title">Knowledge Storage App</h3>
+          <p class="project__description">A personal knowledge management platform with rich content types and intuitive organization.</p>
+          <ul class="project__features">
+            <li>6 custom content types</li>
+            <li>Drag-and-drop uploads</li>
+            <li>Password protection</li>
+            <li>Fast filtering</li>
+          </ul>
+          <div class="project__tags">
+            <span class="tag">React</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Mongoose</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-separator"></div>
+      <!-- Project 3 -->
+      <div class="project anim-fade">
+        <div class="project__image">
+          <div class="project__preview" data-project="notetube">
+            <img src="images/notetube.png" alt="YouTube Notes Library" class="project__preview-img" />
+            <div class="project__preview-vignette"></div>
+            <div class="project__preview-overlay">
+              <div class="project__preview-terminal">
+                <div class="project__preview-dots">
+                  <span class="dot dot--red"></span>
+                  <span class="dot dot--yellow"></span>
+                  <span class="dot dot--green"></span>
+                </div>
+                <span class="project__preview-cmd">~ rayhanmandli$ notetube</span>
+              </div>
+              <div class="project__preview-actions">
+                <a href="#" class="btn btn--primary btn--sm btn--live" data-deployed="false" aria-disabled="true">Live Site</a>
+                <a href="https://github.com/RayhanMandli/note-tube" class="btn btn--outline btn--sm">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project__info">
+          <h3 class="project__title">YouTube Notes Library</h3>
+          <p class="project__description">Structured learning tool that pairs video content with timestamped notes for efficient knowledge capture.</p>
+          <ul class="project__features">
+            <li>Multi-library system</li>
+            <li>Timestamped notes</li>
+            <li>Structured learning flow</li>
+          </ul>
+          <div class="project__tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION SECTION ==================== -->
+  <section id="education" class="education section">
+    <div class="section__container section__container--narrow">
+      <span class="section__label anim-fade">EDUCATION</span>
+      <h2 class="section__heading anim-fade">Academic <span class="text-cyan">Background</span></h2>
+
+      <div class="education__item anim-fade">
+        <div class="education__degree">B.E. in Computer Engineering <i>(9+ cpi)</i></div>
+        <div class="education__school">L.D.College of Engineering</div>
+        <div class="education__year">2023 — Present</div>
+      </div>
+
+      <div class="education__item anim-fade">
+        <div class="education__degree">Higher Secondary (XII) <i>(90+%)</i></div>
+        <div class="education__school">S.P. School, Halvad</div>
+        <div class="education__year">2021 — 2023</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="contact section">
+    <div class="section__container section__container--narrow contact__inner">
+      <span class="section__label anim-fade">GET IN TOUCH</span>
+      <h2 class="section__heading anim-fade">Let's work together<br />on your next <span class="text-cyan">project</span></h2>
+      <p class="contact__text anim-fade">
+        I'm currently open to freelance work, internships, and collaboration opportunities. Feel free to reach out!
+      </p>
+      <div class="contact__buttons anim-fade">
+        <a href="mailto:mandlirayhan@gmail.com" class="btn btn--primary">Send Email</a>
+        <a href="https://github.com/RayhanMandli" target="_blank" rel="noopener" class="btn btn--outline">GitHub</a>
+        <a href="https://linkedin.com/in/rayhan020" target="_blank" rel="noopener" class="btn btn--outline">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <p>&copy; 2026 Rayhan Mandli. Built with purpose.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
