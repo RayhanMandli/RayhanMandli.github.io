@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPortraitTilt();
   initProjectTilt();
   initProjectMobile();
+  initTimelineScroll();
 });
 
 /* ============================
@@ -515,4 +516,46 @@ function initProjectMobile() {
       }
     });
   }
+}
+
+/* ============================
+   TIMELINE AUTO-SCROLL TO ACTIVE
+   ============================ */
+function initTimelineScroll() {
+  const track = document.querySelector('.timeline__track');
+  const activeItem = document.querySelector('.timeline__item--active');
+  const focusSection = document.getElementById('focus');
+  if (!track || !activeItem || !focusSection) return;
+
+  // Only auto-scroll on desktop (horizontal layout)
+  if (window.innerWidth < 768) return;
+
+  let hasScrolled = false;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasScrolled) {
+          hasScrolled = true;
+          // Wait for fade-in animation to start
+          setTimeout(() => {
+            const trackRect = track.getBoundingClientRect();
+            const itemRect = activeItem.getBoundingClientRect();
+            const trackScrollLeft = track.scrollLeft;
+
+            // Calculate scroll to center the active item
+            const itemCenter = (itemRect.left - trackRect.left) + trackScrollLeft + (itemRect.width / 2);
+            const trackCenter = trackRect.width / 2;
+            const scrollTo = itemCenter - trackCenter;
+
+            track.scrollTo({ left: Math.max(0, scrollTo), behavior: 'smooth' });
+          }, 400);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  observer.observe(focusSection);
 }
