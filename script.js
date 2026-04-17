@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectTilt();
   initProjectMobile();
   initTimelineScroll();
+  initMusicPlayer();
 });
 
 /* ============================
@@ -558,4 +559,34 @@ function initTimelineScroll() {
   );
 
   observer.observe(focusSection);
+}
+
+/* ============================
+   FLOATING MUSIC PLAYER
+   ============================ */
+function initMusicPlayer() {
+  if (window.innerWidth < 768) return;
+
+  const player = document.getElementById('music-player');
+  const toggle = document.getElementById('music-toggle');
+  if (!player || !toggle) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    player.classList.toggle('open');
+  });
+
+  // Close on click outside
+  document.addEventListener('click', (e) => {
+    if (!player.contains(e.target)) {
+      player.classList.remove('open');
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      player.classList.remove('open');
+    }
+  });
 }
