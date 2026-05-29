@@ -3,7 +3,7 @@
    ============================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initLoader();
+  triggerHeroEntrance();
   initNavbar();
   initParticles();
   initRotatingText();
@@ -17,49 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimelineScroll();
   initMusicPlayer();
 });
-
-/* ============================
-   PAGE LOADER
-   ============================ */
-function initLoader() {
-  const loader = document.getElementById('page-loader');
-  const textEl = loader.querySelector('.loader__text');
-  const underlineFill = loader.querySelector('.loader__underline-fill');
-  const messages = [
-    'Initializing Portfolio...',
-    'Gearing up...',
-    'Almost dream come true...',
-    'Welcome.'
-  ];
-
-  let i = 0;
-  const totalDuration = 2800;
-  const perMessage = totalDuration / messages.length;
-
-  function showMessage() {
-    if (i >= messages.length) {
-      // Final — fade out loader
-      setTimeout(() => {
-        loader.classList.add('hidden');
-        triggerHeroEntrance();
-      }, 200);
-      return;
-    }
-
-    textEl.classList.remove('visible');
-    setTimeout(() => {
-      textEl.textContent = messages[i];
-      textEl.classList.add('visible');
-      // Animate underline
-      const progress = ((i + 1) / messages.length) * 100;
-      underlineFill.style.width = progress + '%';
-      i++;
-      setTimeout(showMessage, perMessage);
-    }, 150);
-  }
-
-  showMessage();
-}
 
 /* ============================
    HERO ENTRANCE

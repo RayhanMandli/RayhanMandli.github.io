@@ -54,62 +54,6 @@ img {
 }
 
 /* ============================
-   PAGE LOADER
-   ============================ */
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-
-.loader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.loader__content {
-  text-align: center;
-}
-
-.loader__text {
-  font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  font-weight: 500;
-  color: var(--text);
-  display: block;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  letter-spacing: -0.02em;
-}
-
-.loader__text.visible {
-  opacity: 1;
-}
-
-.loader__underline {
-  width: 120px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.08);
-  margin: 16px auto 0;
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.loader__underline-fill {
-  width: 0%;
-  height: 100%;
-  background: var(--accent);
-  border-radius: 2px;
-  transition: width 0.6s ease;
-}
-
-/* ============================
    NAVBAR
    ============================ */
 .navbar {
