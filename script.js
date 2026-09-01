@@ -416,7 +416,7 @@ function initProjectMobile() {
     // Create tooltip element
     const tooltip = document.createElement('span');
     tooltip.className = 'btn-tooltip';
-    tooltip.textContent = 'Deployment coming soon. Currently running locally.';
+    tooltip.textContent = 'Deployment Temporarily Disabled';
     btn.appendChild(tooltip);
 
     // Prevent navigation
